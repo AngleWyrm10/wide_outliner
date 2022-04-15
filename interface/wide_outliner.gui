@@ -1,4 +1,14 @@
+#--| Wide Outliner by AngleWyrm |----------------------------------------------
+# building on the work of Tiny Outliner 2 by Ivam
+# with original credit for Tiny Outliner going to Folk
+# Github: https://github.com/AngleWyrm10/wide_outliner
+#
+# This is a sub-mod for UI Overhaul Dynamic by Orrie
+
 guiTypes = {
+	#--| Global Variables |------------------------------------------------------
+	@row_height = 20
+	
 	containerWindowType = {
 		name = "outliner_title_entry_window"
 		size = { width = 100% height = 28 }
@@ -58,7 +68,7 @@ guiTypes = {
 	### SECTORS ###
 	containerWindowType = {
 		name = "outliner_sector_title_entry_window"
-		size = { width = 100% height = 22 }
+		size = { width = 100% height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -75,7 +85,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 2 y = 0 }
-			size = { width = 248 height = 30 }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -120,7 +130,7 @@ guiTypes = {
 		smoothListBoxType = {
 			name = "list"
 			id = "list"
-			position = { x = 2 y= 24 }
+			position = { x = 2 y= @row_height }
 			orientation = "UPPER_LEFT"
 			priority = 100
 			#size = { x = 320 y = 0 }
@@ -132,7 +142,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "outliner_member_observation_post_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -220,7 +230,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "outliner_member_army_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -316,7 +326,7 @@ guiTypes = {
 			name = "box"
 			orientation = "upper_left"
 			position = { x = 88 y = 0 }
-			size = { x = 106 y = 20 }
+			size = { x = 106 y = @row_height }
 			spacing = 0
 			format = right
 		}
@@ -324,7 +334,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "outliner_army_type_entry_window"
-		size = { width = 32 height = 20 }
+		size = { width = 32 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_left
 		moveable = no
@@ -354,7 +364,7 @@ guiTypes = {
 	### PLANETS ###
 	containerWindowType = {
 		name = "outliner_member_planet_entry_window"
-		size = { width = 100% height = 20 }
+		size = { width = 100% height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -370,7 +380,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 100% height = 100% }
+			size = { width = 100% height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -423,7 +433,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 80
-			maxHeight = 19
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -442,7 +452,7 @@ guiTypes = {
 			name = "star"
 			font = "cg_16b"
 			text = ""
-			position = { x = -1000 y = -1000 }
+			position = { x = -1000 y = @row_height }
 			maxWidth = 0
 			maxHeight = 0
 			fixedSize = yes
@@ -457,7 +467,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 106 y = 1 }
 			maxWidth = 108
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -472,14 +482,14 @@ guiTypes = {
 
 			OverlappingElementsBoxType = {
 				name = "box"
-				size = { x = 128 y = 22 }
+				size = { x = 128 y = @row_height }
 				spacing = 0
 			}
 		}
 
 		containerWindowType = {
 			name = "colonize"
-			size = { width = 100% height = 100% }
+			size = { width = 100% height = @row_height }
 			position = { x = 0 y = 0 }
 			orientation = upper_left
 			moveable = no
@@ -516,7 +526,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "outliner_member_planet_construction_entry_window"
-		size = { width = 65 height = 22 }
+		size = { width = 65 height = @row_height }
 		position = { x = 0 y = 0 }
 
 		iconType = {
@@ -549,7 +559,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "outliner_member_fleet_civilian_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -566,7 +576,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -578,7 +588,7 @@ guiTypes = {
 			name = "fleet_status"
 			position = { x = 4 y = 0 }
 			spriteType = "GFX_fleet_status_icon"
-			frame = 20
+			frame = @row_height
 			scale = 0.70
 		}
 		
@@ -597,7 +607,7 @@ guiTypes = {
 			text = "0"
 			position = { x = -82 y = 1 }
 			maxWidth = 74
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_RIGHT"
 			format = left
@@ -619,7 +629,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 158
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -633,7 +643,7 @@ guiTypes = {
 			text = "100"
 			position = { x = 100 y = 1 }
 			maxWidth = 74
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_RIGHT"
 			format = right
@@ -645,7 +655,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "outliner_member_disabled_alert_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -660,7 +670,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -682,7 +692,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 230
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -694,7 +704,7 @@ guiTypes = {
 	### FACTIONS ###
 	containerWindowType = {
 		name = "outliner_member_pop_faction_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -710,7 +720,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -724,7 +734,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 26 y = 1 }
 			maxWidth = 70
-			maxHeight = 20
+			maxHeight = @row_height
 			orientation = "UPPER_LEFT"
 			format = left
 			text_color_code = "E"
@@ -739,7 +749,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "INFLUENCE_GAIN_FROM_FACTION"
 			maxWidth = 68
-			maxHeight = 19
+			maxHeight = @row_height
 			format = right
 		}
 		
@@ -750,7 +760,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "APPROVAL_OF_FACTION"
 			maxWidth = 100
-			maxHeight = 30		
+			maxHeight = @row_height		
 		}
 
 #		iconType = {
@@ -768,7 +778,7 @@ guiTypes = {
 			text = "7"
 			text_color_code = "Y"
 			maxWidth = 30
-			maxHeight = 19
+			maxHeight = @row_height
 			format = left
 		}
 		
@@ -795,7 +805,7 @@ guiTypes = {
 			text = "13"
 			position = { x = 80 y = 1 }
 			maxWidth = 30
-			maxHeight = 19
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = right
@@ -804,7 +814,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "outliner_member_sector_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -819,7 +829,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -833,7 +843,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 118
-			maxHeight = 19
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -856,7 +866,7 @@ guiTypes = {
 			position = { x = 168 y = 1 }
 			alwaysTransparent = yes
 			maxWidth = 30
-			maxHeight = 19
+			maxHeight = @row_height
 			fixedSize = yes
 			format = right
 		}
@@ -895,7 +905,7 @@ guiTypes = {
 	### INTEGRATION OF SUBJECTS ###
 	containerWindowType = {
 		name = "outliner_member_integration_entry_window"
-		size = { width = 318 height = 20 }
+		size = { width = 318 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -910,7 +920,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -931,7 +941,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 100
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -951,7 +961,7 @@ guiTypes = {
 	### TERRAFORMING ###
 	containerWindowType = {
 		name = "outliner_member_terraforming_entry_window"
-		size = { width = 350 height = 20 }
+		size = { width = 350 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -966,7 +976,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 350 height = 100% }
+			size = { width = 350 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -989,7 +999,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 310
-			maxHeight = 19
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1004,7 +1014,7 @@ guiTypes = {
 			position = { x = -1000 y = 3 }
 			orientation = "UPPER_RIGHT"
 			maxWidth = 70
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
 			format = right
 			alwaysTransparent = yes
@@ -1033,13 +1043,10 @@ guiTypes = {
 	### STARBASE ###
 	containerWindowType = {
 		name = "outliner_member_starbase_entry_window"
-		size = { width = 100% height = 20 }
+		size = { width = 100% height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
-
-		@text_max_height = 20
-		@text_bottom_y = 1
 
 		buttonType = {
 			name = "background"
@@ -1052,7 +1059,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 100% height = 100% }
+			size = { width = 100% height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -1074,7 +1081,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 80
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1086,9 +1093,9 @@ guiTypes = {
 			name = "starbase_type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 106 y = @text_bottom_y }
+			position = { x = 106 y = @row_height }
 			maxWidth = 74
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1102,7 +1109,7 @@ guiTypes = {
 			text = ""
 			position = { x = -1000 y = -1000 }
 			maxWidth = 65
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_RIGHT"
 			format = right
@@ -1113,7 +1120,7 @@ guiTypes = {
 			position = { x = 184 y = 1 }
 			font = "cg_16b"
 			maxWidth = 64
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			format = right
 		}
@@ -1122,7 +1129,7 @@ guiTypes = {
 			name = "starbase_status_container"
 			gridBoxType = {
 				name = "starbase_status_list"
-				slotSize = { width = 15 height = 15 }
+				slotSize = { width = 15 height = @row_height }
 				position = { x = -20 y = 1 }
 				max_slots_horizontal = 2
 				max_slots_vertical = 1
@@ -1132,7 +1139,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "constructions"
-			size = { width = 100% height = 100% }
+			size = { width = 100% height = @row_height }
 			position = { x = 0 y = 0 }
 			orientation = upper_left
 			moveable = no
@@ -1140,7 +1147,7 @@ guiTypes = {
 			OverlappingElementsBoxType = {
 				name = "box"
 				position = { x = -70 y = 1 }
-				size = { x = 240 y = 30 }
+				size = { x = 240 y = @row_height }
 				spacing = 4.0
 				format = right
 			}
@@ -1149,7 +1156,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_window"
-		size = { width = 65 height = 22 }
+		size = { width = 65 height = @row_height }
 		position = { x = 0 y = 0 }
 
 		iconType = {
@@ -1190,7 +1197,7 @@ guiTypes = {
 		overlappingElementsBoxType = {
 			name = "progress_bars"
 			position = { x = 18 y = 3 }
-			size = { x = 200 y = 30 }
+			size = { x = 200 y = @row_height }
 			spacing = 2.0
 			format = left
 		}
@@ -1199,7 +1206,7 @@ guiTypes = {
 	### SHIPYARD ###
 	containerWindowType = {
 		name = "outliner_member_shipyard_entry_window"
-		size = { width = 318 height = 20 }
+		size = { width = 318 height = @row_height }
 		position = { x = 0 y = 0 }
 		orientation = upper_right
 		moveable = no
@@ -1215,7 +1222,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "selected_overlay"
 			position = { x = 0 y = 0 }
-			size = { width = 248 height = 100% }
+			size = { width = 248 height = @row_height }
 			background = {
 				name = "selected_bg"
 				spriteType = "GFX_glow_tile_orange_no_padding"
@@ -1237,7 +1244,7 @@ guiTypes = {
 			text = "0"
 			position = { x = 28 y = 1 }
 			maxWidth = 80
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1249,9 +1256,9 @@ guiTypes = {
 			name = "shipyard_type"
 			font = "cg_16b"
 			text = "MEGASTRUCTURE"
-			position = { x = 106 y = @text_bottom_y }
+			position = { x = 106 y = @row_height }
 			maxWidth = 132
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1264,7 +1271,7 @@ guiTypes = {
 			text = ""
 			position = { x = -1000 y = 3 }
 			maxWidth = 65
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_RIGHT"
 			format = right
@@ -1272,7 +1279,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "constructions"
-			size = { width = 140 height = 20 }
+			size = { width = 140 height = @row_height }
 			position = { x = 109 y = 0 }
 			clipping = no
 
@@ -1292,7 +1299,7 @@ guiTypes = {
 			overlappingElementsBoxType = {
 				name = "progress_bars"
 				position = { x = 18 y = 3 }
-				size = { x = 120 y = 20 }
+				size = { x = 120 y = @row_height }
 				spacing = 2.0
 				format = left
 			}
@@ -1302,7 +1309,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "outliner_member_shipyard_construction_entry_progress_bar_window"
 		# Should be as wide as the largest progress bar
-		size = { width = 120 height = 50 }
+		size = { width = 120 height = @row_height }
 		position = { x = 0 y = 0 }
 
 		iconType = {
