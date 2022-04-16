@@ -13,10 +13,10 @@ guiTypes = {
 	@outliner_offset_x = -381
 	@row_height        =   22
 	@heading_height    =   26
-  @column_1_width    =  152
+  @column_1_width    =  120
   @column_1_start    =   28
-  @column_2_width    =   80
-  @column_2_start    =  184
+  @column_2_width    =  112
+  @column_2_start    =  152
   @column_3_width    =   78
   @column_3_start    =  268   
 		
@@ -204,6 +204,7 @@ guiTypes = {
 		}
 	} # Outliner container
 
+	#--| Section heading |-------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_title_entry_window"
 		size = { width = @outliner_width height = @heading_height }
@@ -269,9 +270,9 @@ guiTypes = {
 			scrollbarType = "standardlistbox_slider_thick"
 			alwaysTransparent = yes
 		}
-	}
+	} # section heading
 
-	### SECTORS ###
+	#--| Sector section |--------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_sector_title_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -328,7 +329,8 @@ guiTypes = {
 			scrollbarType = "standardlistbox_slider_thick"
 			alwaysTransparent = yes
 		}
-	}
+	} # sector section
+
 	containerWindowType = {
 		name = "outliner_member_observation_post_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -626,7 +628,7 @@ guiTypes = {
 			spriteType = "GFX_debug_ai_strategy"
 		}
 	}
-	### PLANETS ###
+	#--| Planets section |-------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_planet_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -685,11 +687,11 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 28 y = 1 }
-			maxWidth = 110
-			maxHeight = 19
+			position = { x = @column_1_start y = @row_height }
+			maxWidth = @column_1_width
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
+			format = upper_left
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
@@ -697,15 +699,15 @@ guiTypes = {
 			name = "colony_type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 140 y = 1 }
-			maxWidth = 103
+			position = { x = @column_2_start y = @row_height }
+			maxWidth = @column_2_width
 			if_resolution {
 				min_width = 3440
-				maxWidth = 203
+				maxWidth = @column_2_width
 			}
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
+			format = upper_left
 			#text_color_code = "g"
 			alwaysTransparent = yes
 		}
@@ -734,8 +736,8 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "planet_status_container"
-			size = { width = 45 height = 15 }
-			position = { x = -235 y = 2 }
+			size = { width = 45 height = @row_height }
+			position = { x = -45 y = 2 }
 			orientation = upper_right
 			gridBoxType = {
 				name = "planet_status_list"
