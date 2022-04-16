@@ -642,11 +642,12 @@ guiTypes = {
 	#--| Planets section |-------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_planet_entry_window"
-		size = { width = @outliner_w height = @outliner_h }
+		size = { width = @outliner_width height = @row_height }
 		if_resolution = {
 			min_width = 3440
 			size = { width = @outliner_w_3440 height = @outliner_h }
 		}
+		#background
 		buttonType = {
 			name = "background"
 			quadTextureSprite = "GFX_outliner_member_small_bg"
@@ -657,6 +658,7 @@ guiTypes = {
 			position = { x = -4 y = -5 }
 			clicksound = "click_outliner"
 		}
+		# planet type
 		iconType = {
 			name = "type"
 			position = { x = 6 y = 0 }
@@ -665,6 +667,8 @@ guiTypes = {
 			alwaysTransparent = yes
 			scale = 0.52
 		}
+
+		# icons
 		iconType = {
 			name = "designation_icon"
 			position = { x = 6 y = 0 }
@@ -694,23 +698,25 @@ guiTypes = {
 			position = { x = -1 y = -1 }
 			scale = 0.5
 		}
+		# planet name
 		instantTextBoxType = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = @column_1_start y = @row_height }
+			format = upper_left
+			position = { x = @column_1_start y = 1 }
 			maxWidth = @column_1_width
 			maxHeight = @row_height
 			fixedSize = yes
-			format = upper_left
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
+		# colony type
 		instantTextBoxType = {
 			name = "colony_type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = @column_2_start y = @row_height }
+			position = { x = @column_2_start y = 1 }
 			maxWidth = @column_2_width
 			if_resolution {
 				min_width = 3440
@@ -747,7 +753,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "planet_status_container"
-			size = { width = 45 height = @row_height }
+			size = { width = 45 height = 1 }
 			position = { x = -45 y = 2 }
 			orientation = upper_right
 			gridBoxType = {
