@@ -1625,7 +1625,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "0"
 			format    = upper_left
-			position  = { x = @column_1_start y = @row_height }
+			position  = { x = @column_1_start y = 1 }
 			maxWidth  = @column_1_width
 			maxHeight = @row_height
 			fixedSize = yes
@@ -1649,7 +1649,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "0"
 			format    = upper_left
-			position  = { x = @column_2_start y = @row_height }
+			position  = { x = @column_2_start y = 1 }
 			maxWidth  = @column_2_width
 			maxHeight = @row_height
 			fixedSize = yes
