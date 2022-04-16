@@ -1,47 +1,66 @@
+#--| Wide Outliner by AngleWyrm |----------------------------------------------
+# A continuation of the work of Folk, Ivam, Orrie and others
+# This is a sub-mod for UI Overhaul Dynamic
+#
+# Primary goals of Wide Outliner
+# * To address the truncated name fields in the outliner
+# * To make all 17 sections of the outliner 'tiny' one-line entries
+
 guiTypes = {
-	@outliner_w = 400
-	@outliner_w_3440 = 400
-	@outliner_h = 22
+	#--| Variables and preliminaries |-------------------------------------------
+	# Wide Outliner
+	@outliner_width    =  400
+	@outliner_offset_x = -401
+	@row_height        =   22
+		
+	# UI Overhaul Dynamic
+	@outliner_w      =  @outliner_width
+	@outliner_w_3440 =  @outliner_width
+	@outliner_h      =  @row_height 
+
+	# Show/Hide outliner button
 	containerWindowType = {
-		name = "outliner_toggle_window"
-		size = { width = 49 height = 67 }
-		position = { x = -47 y = 45 }
+		name        = "outliner_toggle_window"
 		orientation = upper_right
-		clipping = yes
-		background = {
+		size        = { width =  49 height = 68 } # TODO: box location not moving
+		position    = {     x = -49      y = 46 }
+		clipping    = yes
+		background  = {
 			name = "background"
 			quadTextureSprite = "GFX_tiled_window_transparent" # makes window moveable
 		}
+		# player version of show/hide button
 		buttonType = {
-			name = "outliner_toggle"
+			name       = "outliner_toggle"
+			position   = { x = -4 y = -4 }
+			shortcut   = "o"
+			clicksound = interface
+			oversound  = mouse_over
 			quadTextureSprite = "outliner_button"
-			position = { x = -4 y = -4 }
-			shortcut = "o"
-			clicksound = interface
-			oversound = mouse_over
 		}
+		# observer version of show/hide button
 		buttonType = {
-			name = "observer_outliner_toggle"
-			quadTextureSprite = "observer_outliner_button"
-			position = { x = -4 y = 34 }
-			#shortcut = "o"
+			name       = "observer_outliner_toggle"
+			position   = { x = -4 y = 34 }
 			clicksound = interface
-			oversound = mouse_over
+			oversound  = mouse_over
+			quadTextureSprite = "observer_outliner_button"
 		}
-	}
-	### OUTLINER ###
+	} # Show/Hide outliner button
+
 	positionType = {
 		name = "outliner_window_margin"
 		position = { x = 0 y = -40 }
 	}
 	positionType = {
-		name = "outliner_tooltip_offset"
-		position = { x = -25 y = 0 }
-	}
-	positionType = {
 		name = "outliner_min_size"
 		position = { x = 0 y = 180 }
 	}
+	positionType = {
+		name = "outliner_tooltip_offset"
+		position = { x = -25 y = 0 }
+	}
+	# tooltip window
 	containerWindowType = {
 		name = "outliner_tooltip_window"
 		size = { width = 200 height = 180 }
@@ -57,24 +76,28 @@ guiTypes = {
 			position = { x = 5 y = 5 }
 			format = center
 		}
-	}
+	} # tooltip window
+
+	#--| Outliner container |----------------------------------------------------	
 	containerWindowType = {
 		name = "outliner_base_window"
-		size = { width = 400 height = 20 }
-		position = { x = -340 y = 150 }
 		orientation = upper_right
+		size        = { width = @outliner_width height = @row_height }
+		position    = {     x = @outliner_offset_x   y = 152 }
+
 		containerWindowType = {
 			name = "outliner_window"
-			size = { width = 400 height = 5 }
-			show_position = { x = -260 y = -76 }
-			hide_position = { x = 20 y = -76 }
+			orientation = upper_right
+			size = { width = @outliner_width height = 5 }
+			show_position = { x = @outliner_offset_x y = -76 }
+			hide_position = { x = 1 y = -76 }
 			animation_time = 200
 			animation_type = decelerated
-			orientation = upper_right
+
 			if_resolution = {
 				min_width = 3440
-				size = { width = 400 height = 5 }
-				show_position = { x = -360 y = -76 }
+				size = { width = @outliner_width height = 5 }
+				show_position = { x = @outliner_offset_x y = -76 }
 			}
 			background = {
 				name = "background"
@@ -172,7 +195,8 @@ guiTypes = {
 				defaultSelection = yes
 			}
 		}
-	}
+	} # Outliner container
+
 	containerWindowType = {
 		name = "outliner_title_entry_window"
 		size = { width = 290 height = 28 }
@@ -239,6 +263,7 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
+
 	### SECTORS ###
 	containerWindowType = {
 		name = "outliner_sector_title_entry_window"
@@ -951,13 +976,7 @@ guiTypes = {
 			fixedSize = yes
 			format = right
 		}
-#		iconType = {
-#			name = "attraction_icon"
-#			spriteType = "GFX_has_ftl_magnet"
-#			position = { x = 104 y = -5 }
-#			scale = 0.9
-#			alwaysTransparent = yes
-#		}
+
 		instantTextBoxType = {
 			name = "attraction_label"
 			position = { x = -133 y = 1 }
@@ -2022,4 +2041,4 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
-}
+} # guiTypes
