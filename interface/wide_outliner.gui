@@ -335,6 +335,7 @@ guiTypes = {
 		}
 	} # sector section
 
+	#--| Observation Posts section |---------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_observation_post_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -406,7 +407,9 @@ guiTypes = {
 			alwaysTransparent = yes
 			text_color_code = "Y"
 		}
-	}
+	} # observation posts section
+
+	#--| Armies section |--------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_army_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -491,7 +494,8 @@ guiTypes = {
 			spacing = 0
 			format = right
 		}
-	}
+	} # armies section
+	# army type
 	containerWindowType = {
 		name = "outliner_army_type_entry_window"
 		size = { width = 32 height = 20 }
@@ -514,7 +518,7 @@ guiTypes = {
 			format = left
 			text_color_code = "Y"
 		}
-	}
+	} # army type
 	
 	#--| Fleets section |--------------------------------------------------------
 	containerWindowType = {
@@ -786,7 +790,8 @@ guiTypes = {
 				frame = 50
 			}
 		}
-	}
+	} # planets section
+	# construction window
 	containerWindowType = {
 		name = "outliner_member_planet_construction_entry_window"
 		size = { width = 65 height = 22 }
@@ -814,7 +819,9 @@ guiTypes = {
 			frame = 1
 			scale = 0.85
 		}
-	}
+	} # construction window
+
+	#--| Civilian Ships section |------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_fleet_civilian_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -894,7 +901,8 @@ guiTypes = {
 			spriteType = "GFX_outliner_planet_construction_progressbar"
 			frame = 50
 		}
-	}
+	} # civilian ships section
+	# disabled alerts
 	containerWindowType = {
 		name = "outliner_member_disabled_alert_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -931,8 +939,9 @@ guiTypes = {
 			text_color_code = "g"
 			alwaysTransparent = yes
 		}
-	}
-	### FACTIONS ###
+	} # disabled alerts
+
+	#--| Factions section |------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_pop_faction_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1025,7 +1034,8 @@ guiTypes = {
 			maxHeight = 19
 			format = right
 		}
-	}
+	} # factions section
+	# member sector entry
 	containerWindowType = {
 		name = "outliner_member_sector_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1099,7 +1109,9 @@ guiTypes = {
 			orientation = upper_right
 			scale = 0.7
 		}
-	}
+	} # member sector entry
+
+	#--| Outliner Options |------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_options_window"
 		size = { width = 400 height = 900 }
@@ -1208,7 +1220,9 @@ guiTypes = {
 			maxWidth = 400
 			format = left
 		}
-	}
+	} #outliner options
+
+	#--| Outliner options window |-----------------------------------------------
 	containerWindowType = {
 		name = "outliner_options_entry_window"
 		size = { width = 280 height = 38 }
@@ -1256,10 +1270,11 @@ guiTypes = {
 			#rotation = 1.57
 			pdx_tooltip = "OUTLINER_OPTIONS_SORT_DOWN_TOOLTIP"
 		}
-	}
-	### REORDER PLANETS ###
-    containerWindowType = {
-        name = "outliner_rearrange_window"
+	} # outliner options window
+
+	#--| Reorder Planets section |-----------------------------------------------
+  containerWindowType = {
+    name = "outliner_rearrange_window"
 		size = { width = 400 height = 900 }
 		position = { x = -610 y = 65 }
 		if_resolution = {
@@ -1384,7 +1399,9 @@ guiTypes = {
 			buttonFont = "cg_16b"
 			pdx_tooltip = "SORT_BY_DESIGNATION_H"
 		}
-	}
+	} # reorder planets section
+
+	#--| Rearrange outliner window section |-------------------------------------
 	containerWindowType = {
 		name = "outliner_rearrange_entry_window"
 		size = { width = 282 height = 32 }
@@ -1453,8 +1470,9 @@ guiTypes = {
 			#rotation = 1.57
 			pdx_tooltip = "OUTLINER_OPTIONS_SORT_DOWN_TOOLTIP"
 		}
-	}
-	### INTEGRATION OF SUBJECTS ###
+	} # rearrange outliner window section
+
+	#--| Subject Integration section |-------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_integration_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1497,8 +1515,9 @@ guiTypes = {
 			alwaysTransparent = yes
 			frame = 50
 		}
-	}
-	### TERRAFORMING ###
+	} # subject integration section
+	
+	#--| Terraforming section |--------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_terraforming_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1565,14 +1584,15 @@ guiTypes = {
 			alwaysTransparent = yes
 			frame = 50
 		}
-	}
-	### STARBASE ###
+	} # terraforming section
+
+	#--| Starbase section |------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_starbase_entry_window"
-		size = { width = @outliner_w height = @outliner_h }
+		size = { width = @outliner_width height = @row_height }
 		if_resolution = {
 			min_width = 3440
-			size = { width = @outliner_w_3440 height = @outliner_h }
+			size = { width = @outliner_w_3440 height = @row_height }
 		}
 		@text_max_height = 20
 		@text_bottom_y = 1
@@ -1593,15 +1613,16 @@ guiTypes = {
 			frame = 0
 			scale = 0.64
 		}
+		# starbase name
 		instantTextBoxType = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 28 y = 1 }
-			maxWidth = 100
-			maxHeight = @text_max_height
+			format    = upper_left
+			position  = { x = @column_1_start y = @row_height }
+			maxWidth  = @column_1_width
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
@@ -1616,21 +1637,23 @@ guiTypes = {
 			orientation = upper_right
 			format = right
 		}
+		# starbase type
 		instantTextBoxType = {
 			name = "starbase_type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 130 y = @text_bottom_y }
-			maxWidth = 74
-			maxHeight = @text_max_height
+			format    = upper_left
+			position  = { x = @column_2_start y = @row_height }
+			maxWidth  = @column_2_width
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
 			#text_color_code = "g"
 			alwaysTransparent = yes
 		}
+		# military power
 		instantTextBoxType = {
 			name = "military_power"
-			position = { x = -79 y = 1 }
+			position = { x = -68 y = 1 }
 			font = "cg_16b"
 			maxWidth = 64
 			maxHeight = @text_max_height
@@ -1662,7 +1685,8 @@ guiTypes = {
 				format = left
 			}
 		}
-	}
+	} # starbase section
+	# starbase construction
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_window"
 		size = { width = 65 height = 22 }
@@ -1704,7 +1728,8 @@ guiTypes = {
 			spacing = 2.0
 			format = left
 		}
-	}
+	} # starbase construction
+	# starbase construction progress
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_progress_bar_window"
 		# Should be as wide as the largest progress bar
@@ -1748,7 +1773,8 @@ guiTypes = {
 			spriteType = "GFX_outliner_starbase_construction_progressbar_6"
 			alwaysTransparent = yes
 		}
-	}
+	} # starbase construction progress
+	# observer country window
 	containerWindowType = {
 		name = "observer_outliner_country_window"
 		size = { width = 295 height = 41 }
@@ -1856,7 +1882,7 @@ guiTypes = {
 			text_color_code = "Y"
 			alwaysTransparent = yes
 		}
-	}
+	} # observer country window
 	containerWindowType = {
 		name = "planet_or_starbase_status_entry"
 		size = { width = 15 height = 15 }
@@ -1866,7 +1892,8 @@ guiTypes = {
 			spriteType = "GFX_outliner_status"
 		}
 	}
-	### SHIPYARD ###
+
+	#--| Shipyard section |------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_shipyard_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1908,12 +1935,12 @@ guiTypes = {
 			name = "shipyard_type"
 			font = "cg_16b"
 			text = "MEGASTRUCTURE"
-			position = { x = 106 y = @text_bottom_y }
-			maxWidth = 132
-			maxHeight = @text_max_height
-			fixedSize = yes
 			orientation = "UPPER_LEFT"
-			format = left
+			format      = upper_left
+			position    = { x = @column_2_start y = @row_height }
+			maxWidth    = @column_2_width
+			maxHeight   = @row_height
+			fixedSize   = yes
 			alwaysTransparent = yes
 		}
 		instantTextBoxType = {
@@ -1951,7 +1978,9 @@ guiTypes = {
 				format = center
 			}
 		}
-	}
+	} # shipyard section
+
+	# construction progress bar
 	containerWindowType = {
 		name = "outliner_member_shipyard_construction_entry_progress_bar_window"
 		# Should be as wide as the largest progress bar
@@ -2057,5 +2086,5 @@ guiTypes = {
 			spriteType = "GFX_outliner_shipyard_construction_progressbar_20"
 			alwaysTransparent = yes
 		}
-	}
+	} # construction progress bar
 } # guiTypes
