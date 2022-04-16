@@ -1,8 +1,11 @@
-name="Tiny Outliner v2"
-tags={
-	"Graphics"
-	"Utilities"
+name="Wide Outliner"
+dependencies={
+	"UI Overhaul Dynamic"
 }
-picture="thumbnail.jpg"
+tags={
+	"Fixes"
+	"Graphics"
+	"Overhaul"
+}
+picture="thumbnail.png"
 supported_version="3.3.*"
-remote_file_id="1610578060"
