@@ -835,6 +835,7 @@ guiTypes = {
 			min_width = 3440
 			size = { width = @outliner_w_3440 height = @outliner_h }
 		}
+		# background
 		buttonType = {
 			name = "background"
 			quadTextureSprite = "GFX_outliner_member_small_bg"
@@ -845,6 +846,7 @@ guiTypes = {
 			position = { x = -4 y = -5 }
 			clicksound = "click_outliner"
 		}
+		# fleet status
 		iconType = {
 			name = "fleet_status"
 			position = { x = 4 y = 0 }
@@ -852,22 +854,24 @@ guiTypes = {
 			frame = 20
 			scale = 0.70
 		}
+		# leader level
 		iconType = {
 			name = "leader_level"
-			position = { x = 156 y = -1 }
+			position = { x = 20 y = -1 }
 			spriteType = "GFX_outliner_leader_level"
 			frame = 10
 			alwaysTransparent = yes
 		}
+		# ship type
 		instantTextBoxType = {
 			name = "type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 28 y = 1 }
+			position = { x = 42 y = 1 }
 			maxWidth = 158
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
+			format = upper_left
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
@@ -877,12 +881,12 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = -112 y = 1 }
-			maxWidth = 100
-			maxHeight = 20
+			position = { x = @column_2_start y = 1 }
+			maxWidth = @column_2_width
+			maxHeight = @row_height
 			fixedSize = yes
-			orientation = upper_right
-			format = left
+			orientation = "UPPER_LEFT"
+			format = upper_left
 			text_color_code = "g"
 			alwaysTransparent = yes
 		}
@@ -891,7 +895,7 @@ guiTypes = {
 			name = "location"
 			font = "cg_16b"
 			text = "100"
-			position = { x = 100 y = 1 }
+			position = { x = -1000 y = 1 }
 			maxWidth = 74
 			maxHeight = 20
 			fixedSize = yes
@@ -933,11 +937,12 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			scale = 0.52
 		}
+		# ship name
 		instantTextBoxType = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 28 y = 1 }
+			position = { x = -1000 y = 1 }
 			maxWidth = 230
 			maxHeight = 20
 			fixedSize = yes
