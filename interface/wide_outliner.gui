@@ -13,12 +13,12 @@ guiTypes = {
 	@outliner_offset_x = -381
 	@row_height        =   22
 	@heading_height    =   26
-  @column_1_width    =  120
+  @column_1_width    =  170
   @column_1_start    =   28
-  @column_2_width    =  112
-  @column_2_start    =  152
+  @column_2_width    =  132
+  @column_2_start    =  156
   @column_3_width    =   78
-  @column_3_start    =  268   
+  @column_3_start    =  318   
 		
 	# UI Overhaul Dynamic
 	@outliner_w      =  @outliner_width
@@ -553,19 +553,20 @@ guiTypes = {
 			alwaysTransparent = yes
 			scale = 0.7
 		}
+		# fleet name
 		instantTextBoxType = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 32 y = 1 }
-			maxWidth = 75
+			format = upper_left
+			position = { x = @column_1_start y = 1 }
+			maxWidth = @column_1_width
 			if_resolution = {
 				min_width = 3440
 				maxWidth = 175
 			}
-			maxHeight = 20
+			maxHeight = @row_height
 			fixedSize = yes
-			format = left
 			#alwaysTransparent = yes
 		}
 		instantTextBoxType = {
@@ -781,7 +782,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "colonize"
 			size = { width = 100% height = 100% }
-			position = { x = -3 y = 0 }
+			position = { x = 0 y = 0 }
 			iconType = {
 				name = "icon"
 				position = { x = @column_2_start y = -1 }
@@ -791,7 +792,7 @@ guiTypes = {
 			}
 			iconType = {
 				name = "progress"
-				position = { x = 171 y = 5 }
+				position = { x = 175 y = 5 }
 				spriteType = "GFX_outliner_planet_colonize_small_progressbar"
 				frame = 50
 			}
@@ -912,6 +913,7 @@ guiTypes = {
 			frame = 50
 		}
 	} # civilian ships section
+
 	# disabled alerts
 	containerWindowType = {
 		name = "outliner_member_disabled_alert_entry_window"
