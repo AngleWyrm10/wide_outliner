@@ -150,10 +150,10 @@ guiTypes = {
 				name = "list"
 				position = { x = 0 y = 40 }
 				priority = 100
-				size = { x = 286 y = 0 }
+				size = { x = @outliner_width y = 0 }
 				if_resolution = {
 					min_width = 3440
-					size = { x = 386 y = 0 }
+					size = { x = @outliner_width y = 0 }
 				}
 				borderSize = { x = 0 y = 0 }
 				scrollbarType = "standardlistbox_slider_thick"
@@ -195,7 +195,7 @@ guiTypes = {
 				name = "list"
 				position = { x = 2 y = 42 }
 				priority = 100
-				size = { x = 286 y = 0 }
+				size = { x = @outliner_width y = 0 }
 				borderSize = { x = 0 y = 0 }
 				scrollbarType = "standardlistbox_slider_thick"
 				spacing = -1
@@ -328,7 +328,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 2 y = 24 }
 			priority = 100
-			size = { x = 320 y = 0 }
+			size = { x = @outliner_width y = 0 }
 			borderSize = { x = 0 y = 0 }
 			scrollbarType = "standardlistbox_slider_thick"
 			alwaysTransparent = yes
@@ -1171,7 +1171,7 @@ guiTypes = {
 		smoothListBoxType = {
 			name = "list"
 			position = { x = 5 y = 60 }
-			size = { x = 284 y = 735 }
+			size = { x = @outliner_width y = 735 }
 			priority = 100
 			borderSize = { x = 0 y = 0 }
 			scrollbarType = "standardlistbox_slider_thick"
@@ -1333,7 +1333,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 5 y = 136 }
 			priority = 100
-			size = { x = 279 y = 753 }
+			size = { x = @outliner_width y = 753 }
 			borderSize = { x = 0 y = 0 }
 			scrollbartype = "standardlistbox_slider_thick"
 			autohide_scrollbar = no
