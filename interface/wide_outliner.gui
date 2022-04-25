@@ -11,17 +11,17 @@ guiTypes = {
 	# Wide Outliner
 	@row_height        =   22
 	@heading_height    =   26 
-	@outliner_width	   =	 450
-	@outliner_start	   =  -450
-	@scrollbar_start	 =	 438
-	@column_1_width	   =	 170
-	@column_1_start	   =	 28
-	@column_2_width	   =	 132
-	@column_2_start	   =	 202
-	@column_3_width	   =	 78
-	@column_3_start	   =	 338
-	@combat_power	     =	 -78
-		
+	@outliner_width	=	473
+	@outliner_start	=	-473
+	@scrollbar_start	=	461
+	@column_1_width	=	150
+	@column_1_start	=	28
+	@column_2_width	=	175
+	@column_2_start	=	182
+	@column_3_width	=	78
+	@column_3_start	=	361
+	@combat_power	=	-78
+			
 	# UI Overhaul Dynamic
 	@outliner_w      =  @outliner_width
 	@outliner_w_3440 =  @outliner_width
@@ -871,8 +871,8 @@ guiTypes = {
 			name = "type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 42 y = 1 }
-			maxWidth = 158
+			position = { x = @column_1_start y = 1 }
+			maxWidth = @column_1_width
 			maxHeight = @row_height
 			fixedSize = yes
 			format = upper_left
@@ -1667,12 +1667,13 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 		# military power
+		# doesn't seem to obey upper-right coordinate system
 		instantTextBoxType = {
 			name = "military_power"
 			position = { x = @combat_power y = 1 }
 			font = "cg_16b"
 			maxWidth = @combat_power
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			format = upper_right
 			orientation = upper_right
