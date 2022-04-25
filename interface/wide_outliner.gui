@@ -10,6 +10,7 @@ guiTypes = {
 	#--| Variables and preliminaries |-------------------------------------------
 	# Wide Outliner
 	@outliner_width    =  380
+	@scroll_bar        =  368
 	@outliner_offset_x = -381
 	@row_height        =   22
 	@heading_height    =   26
@@ -150,10 +151,10 @@ guiTypes = {
 				name = "list"
 				position = { x = 0 y = 40 }
 				priority = 100
-				size = { x = @outliner_width y = 0 }
+				size = { x = @scroll_bar y = 0 }
 				if_resolution = {
 					min_width = 3440
-					size = { x = @outliner_width y = 0 }
+					size = { x = @scroll_bar y = 0 }
 				}
 				borderSize = { x = 0 y = 0 }
 				scrollbarType = "standardlistbox_slider_thick"
@@ -195,7 +196,7 @@ guiTypes = {
 				name = "list"
 				position = { x = 2 y = 42 }
 				priority = 100
-				size = { x = @outliner_width y = 0 }
+				size = { x = @scroll_bar y = 0 }
 				borderSize = { x = 0 y = 0 }
 				scrollbarType = "standardlistbox_slider_thick"
 				spacing = -1
@@ -266,7 +267,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 0 y = @row_height }
 			priority = 100
-			size = { x = @outliner_width y = 0 }
+			size = { x = @scroll_bar y = 0 }
 			borderSize = { x = 0 y = 0 }
 			spacing = 0
 			scrollbarType = "standardlistbox_slider_thick"
@@ -328,7 +329,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 2 y = 24 }
 			priority = 100
-			size = { x = @outliner_width y = 0 }
+			size = { x = @scroll_bar y = 0 }
 			borderSize = { x = 0 y = 0 }
 			scrollbarType = "standardlistbox_slider_thick"
 			alwaysTransparent = yes
@@ -1171,7 +1172,7 @@ guiTypes = {
 		smoothListBoxType = {
 			name = "list"
 			position = { x = 5 y = 60 }
-			size = { x = @outliner_width y = 735 }
+			size = { x = @scroll_bar y = 735 }
 			priority = 100
 			borderSize = { x = 0 y = 0 }
 			scrollbarType = "standardlistbox_slider_thick"
@@ -1333,7 +1334,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 5 y = 136 }
 			priority = 100
-			size = { x = @outliner_width y = 753 }
+			size = { x = @scroll_bar y = 753 }
 			borderSize = { x = 0 y = 0 }
 			scrollbartype = "standardlistbox_slider_thick"
 			autohide_scrollbar = no
