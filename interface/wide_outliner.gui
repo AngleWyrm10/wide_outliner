@@ -12,20 +12,20 @@ guiTypes = {
 	# https://docs.google.com/spreadsheets/d/1y-MKsejgJQugm-mm9hvyYyqzuoL2laFlEqCIu49dTKw
 	@row_height	=	22
 	@heading_height	=	26
-	@outliner_width	=	473
-	@outliner_start	=	-473
-	@scrollbar_start	=	461
-	@column_1_width	=	150
+	@outliner_width	=	453
+	@outliner_start	=	-453
+	@scrollbar_start	=	441
+	@column_1_width	=	130
 	@column_1_start	=	28
 	@column_2_width	=	175
-	@column_2_start	=	182
+	@column_2_start	=	162
 	@column_3_width	=	78
-	@column_3_start	=	361
+	@column_3_start	=	341
 	@combat_power	=	-78
-	@civilian_leader_start	=	28
+	@civilian_leader_start	=	16
 	@civilian_type_width	=	130
-	@civilian_type_start	=	44
-	@civilian_name_start	=	178
+	@civilian_type_start	=	38
+	@civilian_name_start	=	172
 	@civilian_name_width	=	175
 			
 	# UI Overhaul Dynamic
