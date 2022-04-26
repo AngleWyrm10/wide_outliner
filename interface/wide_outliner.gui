@@ -8,9 +8,10 @@
 
 guiTypes = {
 	#--| Variables and preliminaries |-------------------------------------------
-	# Wide Outliner
-	@row_height        =   22
-	@heading_height    =   26 
+	# Wide Outliner, values calculated in spreadsheet at
+	# https://docs.google.com/spreadsheets/d/1y-MKsejgJQugm-mm9hvyYyqzuoL2laFlEqCIu49dTKw
+	@row_height	=	22
+	@heading_height	=	26
 	@outliner_width	=	473
 	@outliner_start	=	-473
 	@scrollbar_start	=	461
@@ -21,6 +22,11 @@ guiTypes = {
 	@column_3_width	=	78
 	@column_3_start	=	361
 	@combat_power	=	-78
+	@civilian_leader_start	=	28
+	@civilian_type_width	=	130
+	@civilian_type_start	=	44
+	@civilian_name_start	=	178
+	@civilian_name_width	=	175
 			
 	# UI Overhaul Dynamic
 	@outliner_w      =  @outliner_width
@@ -834,7 +840,7 @@ guiTypes = {
 	#--| Civilian Ships section |------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_fleet_civilian_entry_window"
-		size = { width = @outliner_w height = @outliner_h }
+		size = { width = @outliner_width height = @row_height }
 		if_resolution = {
 			min_width = 3440
 			size = { width = @outliner_w_3440 height = @outliner_h }
@@ -850,7 +856,7 @@ guiTypes = {
 			position = { x = -4 y = -5 }
 			clicksound = "click_outliner"
 		}
-		# fleet status
+		# civilian fleet status
 		iconType = {
 			name = "fleet_status"
 			position = { x = 4 y = 0 }
@@ -861,7 +867,7 @@ guiTypes = {
 		# leader level
 		iconType = {
 			name = "leader_level"
-			position = { x = 20 y = -1 }
+			position = { x = @civilian_leader_start y = -1 }
 			spriteType = "GFX_outliner_leader_level"
 			frame = 10
 			alwaysTransparent = yes
@@ -871,8 +877,8 @@ guiTypes = {
 			name = "type"
 			font = "cg_16b"
 			text = "0"
-			position = { x = @column_1_start y = 1 }
-			maxWidth = @column_1_width
+			position = { x = @civilian_type_start y = 1 }
+			maxWidth = @civilian_type_width
 			maxHeight = @row_height
 			fixedSize = yes
 			format = upper_left
@@ -885,8 +891,8 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = @column_2_start y = 1 }
-			maxWidth = @column_2_width
+			position = { x = @civilian_name_start y = 1 }
+			maxWidth = @civilian_name_width
 			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
