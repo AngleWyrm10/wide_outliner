@@ -293,7 +293,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "background"
-			quadTextureSprite = "GFX_outliner_member_small_bg"
+			quadTextureSprite = "GFX_outliner_heading" # was "GFX_outliner_member_small_bg"
 			if_resolution = {
 				min_width = 3440
 				quadTextureSprite = "GFX_outliner_member_small_3440_bg"
