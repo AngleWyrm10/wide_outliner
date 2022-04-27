@@ -11,17 +11,17 @@ guiTypes = {
 	# Wide Outliner, values calculated in spreadsheet at
 	# https://docs.google.com/spreadsheets/d/1y-MKsejgJQugm-mm9hvyYyqzuoL2laFlEqCIu49dTKw
 	@row_height	=	22
-	@heading_height	=	26
-	@outliner_width	=	453
-	@internal_width	=	445
-	@outliner_start	=	-453
-	@scrollbar_start	=	441
-	@column_1_width	=	130
+	@heading_height	=	28
+	@outliner_width	=	448
+	@internal_width	=	440
+	@outliner_start	=	-448
+	@scrollbar_start	=	436
+	@column_1_width	=	140
 	@column_1_start	=	28
-	@column_2_width	=	175
-	@column_2_start	=	162
+	@column_2_width	=	160
+	@column_2_start	=	172
 	@column_3_width	=	78
-	@column_3_start	=	341
+	@column_3_start	=	336
 	@combat_power	=	-78
 	@civilian_leader_start	=	16
 	@civilian_type_width	=	130
@@ -225,8 +225,8 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "fake_background"
-			size = { width = @internal_width height = @row_height }
-			position = { x = 1 y = 2 }
+			size = { width = @internal_width height = @heading_height }
+			position = { x = 1 y = -2 }
 			background = {
 				name = "background"
 				spriteType = "GFX_glow_tile_line"
@@ -241,7 +241,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_outliner_member_small_3440_bg"
 			}
 			clicksound = "outliner_click_tab"
-			position = { x = -2 y = -1 }
+			position = { x = -2 y = -4 }
 		}
 		# section name
 		instantTextBoxType = {
@@ -254,7 +254,7 @@ guiTypes = {
 				min_width = 3440
 				maxWidth = @outliner_w_3440
 			}
-			maxHeight = @row_height
+			maxHeight = @heading_height
 			fixedSize = yes
 			format = upper_left
 			text_color_code = "H"
@@ -267,14 +267,14 @@ guiTypes = {
 			text = "0"
 			position = { x = 8 y = 0 }
 			maxWidth = 32
-			maxHeight = @row_height
+			maxHeight = @heading_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = upper_left
 		}
 		smoothListBoxType = {
 			name = "list"
-			position = { x = 0 y = @row_height }
+			position = { x = 0 y = @heading_height }
 			priority = 100
 			size = { x = @scrollbar_start y = 0 }
 		  borderSize = { x = 0 y = 0 }
@@ -533,10 +533,10 @@ guiTypes = {
 	#--| Fleets section |--------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_fleet_entry_window"
-		size = { width = @outliner_w height = @outliner_h }
+		size = { width = @outliner_width height = @row_height }
 		if_resolution = {
 			min_width = 3440
-			size = { width = @outliner_w_3440 height = @outliner_h }
+			size = { width = @outliner_w_3440 height = @row_height }
 		}
 		buttonType = {
 			name = "background"
@@ -545,7 +545,7 @@ guiTypes = {
 				min_width = 3440
 				quadTextureSprite = "GFX_outliner_member_small_3440_bg"
 			}
-			position = { x = -4 y = -5 }
+			position = { x = 0 y = -4 }
 			clicksound = "click_outliner"
 		}
 		iconType = {
@@ -569,7 +569,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "0"
 			format = upper_left
-			position = { x = @column_1_start y = 1 }
+			position = { x = @column_1_start y = 0 }
 			maxWidth = @column_1_width
 			if_resolution = {
 				min_width = 3440
@@ -635,7 +635,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "fleet_status_entry"
-		size = { width = 15 height = 15 }
+		size = { width = 15 height = @row_height }
 		iconType = {
 			name = "status"
 			spriteType = "GFX_outliner_fleet_status"
@@ -643,7 +643,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "ai_fleet_status_entry"
-		size = { width = 15 height = 15 }
+		size = { width = 15 height = @row_height }
 		iconType = {
 			name = "status"
 			spriteType = "GFX_debug_ai_strategy"
