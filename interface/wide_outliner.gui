@@ -1617,8 +1617,6 @@ guiTypes = {
 			min_width = 3440
 			size = { width = @outliner_w_3440 height = @row_height }
 		}
-		@text_max_height = 20
-		@text_bottom_y = 1
 		buttonType = {
 			name = "background"
 			quadTextureSprite = "GFX_outliner_member_small_bg"
@@ -1656,7 +1654,7 @@ guiTypes = {
 			text = ""
 			position = { x = -1000 y = -1000 }
 			maxWidth = 65
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = upper_right
 			format = right
@@ -1924,7 +1922,7 @@ guiTypes = {
 	#--| Shipyard section |------------------------------------------------------
 	containerWindowType = {
 		name = "outliner_member_shipyard_entry_window"
-		size = { width = @outliner_w height = @outliner_h }
+		size = { width = @outliner_width height = @row_height }
 		if_resolution = {
 			min_width = 3440
 			size = { width = @outliner_w_3440 height = @outliner_h }
@@ -1950,9 +1948,9 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 28 y = 1 }
-			maxWidth = 90
-			maxHeight = @text_max_height
+			position = { x = @column_1_start y = 1 }
+			maxWidth = @column_1_width
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
 			format = left
@@ -1977,15 +1975,15 @@ guiTypes = {
 			text = ""
 			position = { x = -1000 y = 3 }
 			maxWidth = 65
-			maxHeight = @text_max_height
+			maxHeight = @row_height
 			fixedSize = yes
 			orientation = upper_right
 			format = right
 		}
 		containerWindowType = {
 			name = "constructions"
-			size = { width = 180 height = 20 }
-			position = { x = 109 y = 0 }
+			size = { width = @column_3_width height = @row_height }
+			position = { x = @column_3_start y = 0 }
 			clipping = no
 			background = {
 				name = "bg"
@@ -2000,10 +1998,10 @@ guiTypes = {
 			}
 			overlappingElementsBoxType = {
 				name = "progress_bars"
-				position = { x = 18 y = 3 }
+				position = { x = 4 y = 3 }
 				size = { x = 160 y = 20 }
 				spacing = 2.0
-				format = center
+				format = upper_left
 			}
 		}
 	} # shipyard section
