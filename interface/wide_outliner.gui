@@ -12,17 +12,17 @@ guiTypes = {
 	# https://docs.google.com/spreadsheets/d/1y-MKsejgJQugm-mm9hvyYyqzuoL2laFlEqCIu49dTKw
 	@row_height	=	22
 	@heading_height	=	28
-	@outliner_width	=	448
-	@internal_width	=	440
-	@outliner_start	=	-448
-	@scrollbar_start	=	436
+	@outliner_width	=	418
+	@internal_width	=	410
+	@outliner_start	=	-418
+	@scrollbar_start	=	406
 	@column_1_width	=	140
 	@column_1_start	=	28
-	@column_2_width	=	160
+	@column_2_width	=	150
 	@column_2_start	=	172
-	@column_3_width	=	78
-	@column_3_start	=	336
-	@combat_power	=	-78
+	@column_3_width	=	58
+	@column_3_start	=	326
+	@combat_power	=	-75
 	@civilian_leader_start	=	16
 	@civilian_type_width	=	130
 	@civilian_type_start	=	38
@@ -284,7 +284,7 @@ guiTypes = {
 		}
 	} # section heading
 
-	#--| Sector section |--------------------------------------------------------
+	#--| Sector heading section |------------------------------------------------
 	containerWindowType = {
 		name = "outliner_sector_title_entry_window"
 		size = { width = @internal_width height = @outliner_h }
@@ -579,11 +579,12 @@ guiTypes = {
 			fixedSize = yes
 			#alwaysTransparent = yes
 		}
+		# fleet location, moved off-screen
 		instantTextBoxType = {
 			name = "location"
 			font = "cg_16b"
 			text = ""
-			position = { x = 0 y = 0 }
+			position = { x = 1000 y = 0 }
 			maxWidth = 1 # 100
 			maxHeight = 1 # 20
 			fixedSize = yes
@@ -739,6 +740,7 @@ guiTypes = {
 			#text_color_code = "g"
 			alwaysTransparent = yes
 		}
+		# star location, moved off-screen
 		instantTextBoxType = {
 			name = "star"
 			font = "cg_16b"
@@ -751,6 +753,8 @@ guiTypes = {
 			format = right
 			alwaysTransparent = yes
 		}
+		# planet class, moved off-screen
+		# apparently different from planet class
 		instantTextBoxType = {
 			name = "class"
 			font = "cg_16b"
@@ -762,11 +766,13 @@ guiTypes = {
 			format = left
 			alwaysTransparent = yes
 		}
+		# status grid
 		containerWindowType = {
 			name = "planet_status_container"
-			size = { width = 45 height = 1 }
-			position = { x = -45 y = 2 }
+			size = { width = 90 height = 1 }
+			position = { x = -130 y = 2 }
 			orientation = upper_right
+			# 6 x slots @ 15 each = 90px wide
 			gridBoxType = {
 				name = "planet_status_list"
 				slotSize = { width = 15 height = 15 }
@@ -775,15 +781,16 @@ guiTypes = {
 				format = "UPPER_RIGHT"
 			}
 		}
+		# construction progress bar
 		containerWindowType = {
 			name = "constructions"
-			size = { width = 400 height = 20 }
-			position = { x = -188 y = 2 }
+			size = { width = @outliner_width height = @row_height }
+			position = { x = -70 y = 2 }
 			orientation = upper_right
 			overlappingElementsBoxType = {
 				name = "box"
 				position = { x = 0 y = 0 }
-				size = { x = 130 y = 22 }
+				size = { x = 64 y = 22 }
 				spacing = 0
 				format = right
 			}
@@ -791,18 +798,18 @@ guiTypes = {
 		# colonization progress
 		containerWindowType = {
 			name = "colonize"
-			size = { width = 100% height = 100% }
+			size = { width = 100 height = @row_height }
 			position = { x = 0 y = 0 }
 			iconType = {
 				name = "icon"
-				position = { x = @column_2_start y = -1 }
+				position = { x = 150 y = -1 }
 				spriteType = "GFX_ship_class_small"
 				frame = 14
 				scale = 0.8
 			}
 			iconType = {
 				name = "progress"
-				position = { x = 175 y = 5 }
+				position = { x = @column_2_start y = 5 }
 				spriteType = "GFX_outliner_planet_colonize_small_progressbar"
 				frame = 50
 			}
@@ -917,10 +924,10 @@ guiTypes = {
 		}
 		iconType = {
 			name = "progress"
-			position = { x = -112 y = 5 }
+			position = { x = -58 y = 5 }
 			orientation = upper_right
 			spriteType = "GFX_outliner_planet_construction_progressbar"
-			frame = 50
+			frame = 60
 		}
 	} # civilian ships section
 
@@ -990,17 +997,18 @@ guiTypes = {
 			scale = 0.34
 			alwaysTransparent = yes
 		}
+		# faction name
 		instantTextBoxType = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			position = { x = 26 y = 1 }
-			maxWidth = 108
+			position = { x = @column_1_start y = 1 }
+			maxWidth = 200
 			if_resolution {
 				min_width = 3440
 				maxWidth = 208
 			}
-			maxHeight = 20
+			maxHeight = @row_height
 			format = left
 			text_color_code = "E"
 			alwaysTransparent = yes
@@ -1677,7 +1685,7 @@ guiTypes = {
 		# appears to enforce a centered arrangement
 		instantTextBoxType = {
 			name = "military_power"
-			position = { x = @combat_power y = 1 }
+			position = { x = -60 y = 1 }
 			font = "cg_16b"
 			maxWidth = @combat_power
 			maxHeight = @row_height
@@ -1689,7 +1697,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "starbase_status_container"
 			size = { width = 45 height = 15 }
-			position = { x = 7 y = 1 }
+			position = { x = 30 y = 1 }
 			gridBoxType = {
 				name = "starbase_status_list"
 				slotSize = { width = 15 height = 15 }
