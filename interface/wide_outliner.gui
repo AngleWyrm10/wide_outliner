@@ -704,11 +704,12 @@ guiTypes = {
 			position = { x = 6 y = -2 }
 			spriteType = "GFX_planet_invasion"
 		}
+		# Branch Office flag
 		buttonType = {
 			name = "branch_office_flag"
 			spriteType = "GFX_empire_flag_32"
 			position = { x = -1 y = -1 }
-			scale = 0.5
+			scale = 0.33
 		}
 		# planet name
 		instantTextBoxType = {
@@ -754,7 +755,6 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 		# planet class, moved off-screen
-		# apparently different from planet class
 		instantTextBoxType = {
 			name = "class"
 			font = "cg_16b"
@@ -770,7 +770,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_status_container"
 			size = { width = 90 height = 1 }
-			position = { x = -130 y = 2 }
+			position = { x = -150 y = 2 }
 			orientation = upper_right
 			# 6 x slots @ 15 each = 90px wide
 			gridBoxType = {
@@ -1189,7 +1189,7 @@ guiTypes = {
 		smoothListBoxType = {
 			name = "list"
 			position = { x = 5 y = 60 }
-			size = { x = @scrollbar_start y = 0 }
+			size = { x = 300 y = 0 }
       priority = 100
 			borderSize = { x = 0 y = 0 }
 			scrollbarType = "standardlistbox_slider_thick"
@@ -1351,7 +1351,7 @@ guiTypes = {
 			name = "list"
 			position = { x = 5 y = 136 }
 			priority = 100
-			size = { x = @scrollbar_start y = 0 }
+			size = { x = 300 y = 0 }
       borderSize = { x = 0 y = 0 }
 			scrollbartype = "standardlistbox_slider_thick"
 			autohide_scrollbar = no
@@ -1696,8 +1696,8 @@ guiTypes = {
 		# status icons
 		containerWindowType = {
 			name = "starbase_status_container"
-			size = { width = 45 height = 15 }
-			position = { x = 30 y = 1 }
+			size = { width = 32 height = 15 }
+			position = { x = 200 y = 1 }
 			gridBoxType = {
 				name = "starbase_status_list"
 				slotSize = { width = 15 height = 15 }
@@ -1724,6 +1724,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_window"
 		size = { width = 65 height = 22 }
+		# see also planet/starbase icon grid below
 		position = { x = 0 y = 0 }
 		iconType = {
 			name = "shipyard"
@@ -1917,15 +1918,16 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	} # observer country window
+	# planet/starbase status icon grid
 	containerWindowType = {
 		name = "planet_or_starbase_status_entry"
 		size = { width = 15 height = 15 }
-		position = { x = 220 y = 0 }
+		position = { x = 75 y = 0 }
 		iconType = {
 			name = "status"
 			spriteType = "GFX_outliner_status"
 		}
-	}
+	} # planet/starbase status icon grid
 
 	#--| Shipyard section |------------------------------------------------------
 	containerWindowType = {
@@ -1977,6 +1979,7 @@ guiTypes = {
 			fixedSize   = yes
 			alwaysTransparent = yes
 		}
+		# shipyard location, moved off-screen
 		instantTextBoxType = {
 			name = "system"
 			font = "cg_16b"
