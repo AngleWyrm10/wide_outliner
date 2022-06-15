@@ -545,12 +545,12 @@ guiTypes = {
 				min_width = 3440
 				quadTextureSprite = "GFX_outliner_member_small_3440_bg"
 			}
-			position = { x = 0 y = -4 }
+			position = { x = 0 y = -4 } # is this position problematic? (was -4)
 			clicksound = "click_outliner"
 		}
 		iconType = {
 			name = "alliance_icon"
-			position = { x = 18 y = 4 }
+			position = { x = 18 y = 2 }
 			spriteType = "GFX_ship_class_small"
 			frame = 16
 			scale = 0.5
@@ -569,7 +569,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "0"
 			format = upper_left
-			position = { x = @column_1_start y = 0 }
+			position = { x = @column_1_start y = 2 }
 			maxWidth = @column_1_width
 			if_resolution = {
 				min_width = 3440
@@ -577,7 +577,7 @@ guiTypes = {
 			}
 			maxHeight = @row_height
 			fixedSize = yes
-			#alwaysTransparent = yes
+			alwaysTransparent = yes
 		}
 		# fleet location, moved off-screen
 		instantTextBoxType = {
@@ -596,7 +596,7 @@ guiTypes = {
 			name = "size_limit"
 			font = "cg_16b"
 			text = ""
-			position = { x = -175 y = 1 }
+			position = { x = -175 y = -2 }
 			orientation = upper_right
 			maxWidth = 100
 			maxHeight = 20
@@ -606,7 +606,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "offensive_power"
-			position = { x = @combat_power y = 1 }
+			position = { x = @combat_power y = -1 }
 			orientation = upper_right
 			font = "cg_16b"
 			maxWidth = 65
@@ -618,13 +618,13 @@ guiTypes = {
 		}
 		iconType = {
 			name = "progress"
-			position = { x = 110 y = 5 }
+			position = { x = 110 y = 3 }
 			spriteType = "GFX_outliner_planet_colonize_progressbar"
 			frame = 50
 		}
 		gridBoxType = {
 			name = "fleet_status_grid"
-			position = { x = -216 y = 2 }
+			position = { x = -216 y = 0 }
 			size = { width = 45 height = 15 }
 			slotSize = { width = 15 height = 15 }
 			max_slots_horizontal = 3
