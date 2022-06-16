@@ -256,7 +256,8 @@ guiTypes = {
 			}
 			maxHeight = @heading_height
 			fixedSize = yes
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			text_color_code = "H"
 			alwaysTransparent = yes
 		}
@@ -270,7 +271,8 @@ guiTypes = {
 			maxHeight = @heading_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
-			format = upper_left
+			# format error reported
+			# format = upper_left
 		}
 		smoothListBoxType = {
 			name = "list"
@@ -332,7 +334,8 @@ guiTypes = {
 			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
-			format = upper_left
+			# format error reported
+			# format = upper_left
 		}
 		smoothListBoxType = {
 			name = "list"
@@ -568,7 +571,8 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			position = { x = @column_1_start y = 2 }
 			maxWidth = @column_1_width
 			if_resolution = {
@@ -716,7 +720,8 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			position = { x = @column_1_start y = 1 }
 			maxWidth = @column_1_width
 			maxHeight = @row_height
@@ -737,7 +742,8 @@ guiTypes = {
 			}
 			maxHeight = @row_height
 			fixedSize = yes
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			#text_color_code = "g"
 			alwaysTransparent = yes
 		}
@@ -889,7 +895,8 @@ guiTypes = {
 			maxWidth = @civilian_type_width
 			maxHeight = @row_height
 			fixedSize = yes
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
@@ -904,7 +911,8 @@ guiTypes = {
 			maxHeight = @row_height
 			fixedSize = yes
 			orientation = "UPPER_LEFT"
-			format = upper_left
+			# format error reported
+			# format = upper_left
 			text_color_code = "g"
 			alwaysTransparent = yes
 		}
@@ -1652,7 +1660,8 @@ guiTypes = {
 			name = "name"
 			font = "cg_16b"
 			text = "0"
-			format    = upper_left
+			# format error reported
+			# format    = upper_left
 			position  = { x = @column_1_start y = 1 }
 			maxWidth  = @column_1_width
 			maxHeight = @row_height
@@ -1677,7 +1686,8 @@ guiTypes = {
 			name = "starbase_type"
 			font = "cg_16b"
 			text = "0"
-			format    = upper_left
+			# format error reported
+			# format    = upper_left
 			position  = { x = @column_2_start y = 1 }
 			maxWidth  = @column_2_width
 			maxHeight = @row_height
@@ -1695,7 +1705,8 @@ guiTypes = {
 			maxWidth = @combat_power
 			maxHeight = @row_height
 			fixedSize = yes
-			format = upper_right
+			# format error reported
+			# format = upper_right
 			orientation = "UPPER_RIGHT"
 		}
 		# status icons
@@ -1769,6 +1780,7 @@ guiTypes = {
 			format = left
 		}
 	} # starbase construction
+
 	# starbase construction progress
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_progress_bar_window"
@@ -1814,6 +1826,7 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	} # starbase construction progress
+	
 	# observer country window
 	containerWindowType = {
 		name = "observer_outliner_country_window"
@@ -1826,6 +1839,7 @@ guiTypes = {
 		clipping = no
 		buttonType = {
 			name = "background"
+			# TODO: add sprite texture file
 			quadTextureSprite = "GFX_ui_outliner_member_bg"
 			if_resolution = {
 				min_width = 3440
@@ -1906,7 +1920,8 @@ guiTypes = {
 			maxWidth = 66
 			maxHeight = 20
 			fixedSize = yes
-			format = upper_right
+			# format error reported
+			# format = upper_right
 			text_color_code = "Y"
 			alwaysTransparent = yes
 		}
@@ -1977,7 +1992,8 @@ guiTypes = {
 			font = "cg_16b"
 			text = "MEGASTRUCTURE"
 			orientation = "UPPER_LEFT"
-			format      = upper_left
+			# format error reported
+			# format      = upper_left
 			position    = { x = @column_2_start y = @row_height }
 			maxWidth    = @column_2_width
 			maxHeight   = @row_height
