@@ -67,12 +67,13 @@ guiTypes = {
 
 	positionType = {
 		name = "outliner_window_margin"
-		position = { x = 0 y = -40 }
+		position = { x = 0 y = 0 }
 	}
 	positionType = {
 		name = "outliner_min_size"
 		position = { x = 0 y = 180 }
 	}
+
 	positionType = {
 		name = "outliner_tooltip_offset"
 		position = { x = -25 y = 0 }
@@ -1736,6 +1737,7 @@ guiTypes = {
 			}
 		}
 	} # starbase section
+
 	# starbase construction
 	containerWindowType = {
 		name = "outliner_member_starbase_construction_entry_window"
