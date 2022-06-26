@@ -1076,6 +1076,7 @@ guiTypes = {
 		}
 	} # factions section
 	# member sector entry
+
 	containerWindowType = {
 		name = "outliner_member_sector_entry_window"
 		size = { width = @outliner_w height = @outliner_h }
@@ -1320,8 +1321,8 @@ guiTypes = {
 	#--| Reorder Planets section |-----------------------------------------------
   containerWindowType = {
     name = "outliner_rearrange_window"
-		size = { width = 400 height = 900 }
-		position = { x = -610 y = 65 }
+		size = { width = 300 height = 800 }
+		position = { x = -830 y = 65 }
 		if_resolution = {
 			min_width = 3440
 			position = { x = -710 y = 65 }
@@ -1361,11 +1362,12 @@ guiTypes = {
 			clicksound = "back_click"
 			pdx_tooltip = "CLOSE_TITLE"
 		}
+		# planet list?
 		smoothListBoxType = {
 			name = "list"
-			position = { x = 5 y = 136 }
+			position = { x = 10 y = 140 }
 			priority = 100
-			size = { x = 300 y = 0 }
+			size = { x = 290 y = 650 }
       borderSize = { x = 0 y = 0 }
 			scrollbartype = "standardlistbox_slider_thick"
 			autohide_scrollbar = no
