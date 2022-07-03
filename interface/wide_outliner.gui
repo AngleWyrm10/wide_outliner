@@ -709,11 +709,11 @@ guiTypes = {
 			position = { x = 6 y = -2 }
 			spriteType = "GFX_planet_invasion"
 		}
-		# Branch Office flag
+		# Branch Office flag, moved off-screen
 		buttonType = {
 			name = "branch_office_flag"
 			spriteType = "GFX_empire_flag_32"
-			position = { x = -1 y = -1 }
+			position = { x = 1000 y = -1 }
 			scale = 0.33
 		}
 		# planet name
